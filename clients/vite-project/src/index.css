@@ -1,42 +1,286 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&family=Roboto:wght@300&display=swap');
 
-
-*html {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+*{
+    padding : 0%;
+    margin : 0%;
+    box-sizing : border-box;
 }
 
-body {
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html{
+    font-family: "Roboto", "Helvetica", sans-serif;
 }
 
-.gradient-bg-welcome {
-  background-color: #0f0e13;
-  background-image: 
-              radial-gradient(at 0% 0%, hsla(255,16%,7%,1) 0, transparent 50%),
-              radial-gradient(at 50% 0%, hsla(255,39%,30%,1) 0, transparent 50%),
-              radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+:root{
+    --color-1: #fff;
+    --color : rgb(255, 255, 255, -6);
+    --color-3 : #000;
+    --color-4: #00002c;
+    --color-5: #0c0225;
+    --color-6: #00b7c5;
+    --color-7: #08d3d3;
+
+}
+header{
+    width : 110%;
+    height: 120%;
+    background : var(--color-5);
+    overflow: hidden;
 }
 
-.gradient-bg-services {
-  background-color: #0f0e13;
-  background-image: 
-              radial-gradient(at 0% 0%, hsla(255,16%,7%,1) 0, transparent 50%),
-              radial-gradient(at 50% 0%, hsla(255,39%,30%,1) 0, transparent 50%),
-              radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+header nav{
+    width: 70%;
+    height: 15%;
+    margin: auto;
+    border: 1px solid var(--color-5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li{
+    position: relative;
+    padding: 3px 15px;
+    z-index: 2;
+}
+
+header nav ul li:nth-child(1):before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(154, 154, 150, -5);
+    border-radius: 50%;
+    top: 5px;
+    right: 9px;
+    z-index: -1;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color : var(--color-1);
+    font-weight: 600;
+    transition: .3s linear;
+}
+
+header nav al li a:hover{
+    color: var(--color-2);
 }
 
 
-.text-gradient {
-  background-color: #fff;
-  background-image: radial-gradient(at 4% 36%, hsla(0,0%100%,1) 0, transparent 10%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+header nav button{
+    padding : 12px 25px;
+    background: linear-gradient(0deg, #ae2c86, #d0498d);
+    border-radius: 30px;
+    color: var(--color-1);
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s linear;
 }
+header nav button:hover{ 
+    background: linear-gradient(0deg, #ae2c86, #d0498d);
+
+}
+
+
+.home .home-slider .slide{
+    display : flex;
+    align-items : center;
+    height: 100vh;
+    justify-content: flex-start;
+}
+
+.home .home-slider .wrapper .slide1{
+    background-image: url(images/agro.png);
+}
+
+
+.home .home-slider .slide1
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home .home-slider .slide .content {
+    text-align: center;
+    padding-left: 15rem;
+    background: linear-gradient(#7ae1e9, #fff); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0 0 10px rgba(11, 14, 219, 0.3); 
+}
+
+
+.home .home-slider .slide .content h1
+{
+    color: white;
+    font-size: 20vh;
+    font-weight: 300;
+}
+
+.home .home-slider .slide .content p
+{  
+    color : #e6e7e7;
+    font-size: 9vh;
+    letter-spacing: 1px;
+    padding : .5rem 0;
+    line-height: 1.5;
+    font-weight: 200;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    border : .1rem solid rgba(205, 170, 124, 0.2);
+    background: transparent;
+    cursor : pointer;
+    padding: .8rem 3rem;
+    position: relative;
+    overflow : hidden;
+    z-index: 1;
+}
+
+.btn:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(59, 2, 45);
+    z-index: -1;
+    position: absolute;
+    top : 0;
+    left: -100%;
+    transition: .5s;
+}
+
+.btn:hover.btn:before{
+    left:0;
+}
+
+@keyframes image{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.produtor{
+    background-image: url('images/background.png');
+}
+.produtor h2 {
+    font-size: 5vh;
+    color: #fff;
+    background-color: #00002c;
+    text-align: center;
+}
+
+.produtor .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    border: 2px solid #000;
+    background-image: url('images/back.png');
+}
+
+.produtor .form-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+
+.produtor .form-container input[type="text"],
+.produtor .form-container input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.produtor .form-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.produtor .form-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.animal {
+    background-image: url('images/background.png');
+}
+
+.animal h2 {
+    font-size: 5vh;
+    color: #fff;
+    background-color: #00002c;
+    text-align: center;
+}
+.animal .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    border: 2px solid #000;
+    background-image: url('images/back.png');
+}
+
+.animal .form-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+
+.animal .form-container input[type="text"],
+.animal .form-container input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.animal .form-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.animal .form-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
